@@ -12,8 +12,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "./app",
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": ["shared/components/*"],
+      "@/hooks/*": ["shared/hooks/*"],
+      "@/store/*": ["store/*"],
+      "@/assets/*": ["assets/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
