@@ -1,0 +1,24 @@
+services:
+  mongo_db:
+    container_name: mongo_db_container
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_db:/data/db
+
+  # api:
+  #   container_name: react_movie_nestjs_backend
+  #   build: .
+  #   ports:
+  #     - 4000:4200
+  #   environment:
+  #     PORT: 3000
+  #     MONGODB_URI: mongodb://mongo_db:27017
+  #     DB_NAME: react-movie-db
+  #   depends_on:
+  #     - mongo_db
+
+volumes:
+  mongo_db: {}
